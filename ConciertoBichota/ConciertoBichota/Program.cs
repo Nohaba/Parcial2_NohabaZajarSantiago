@@ -8,7 +8,23 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<DataBaseContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+//Se llama al seeder 
+builder.Services.AddTransient<SeederDb>();
+
 var app = builder.Build();
+
+//SeederData(); 
+
+//void SeederData()
+//{
+//    IServiceScopeFactory? scopeFactory = app.Services.GetService<IServiceScopeFactory>();   
+
+//    using (IServiceScope? scope = scopeFactory.CreateScope())
+//    {
+//        SeederDb? service = scope.ServiceProvider.GetService<SeederDb>();
+//        service.SeedAsync().Wait();
+//    }
+//}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
