@@ -9,7 +9,7 @@
 <h1>PERSONAS NATURALES</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-outline-info" >Crear Persona Natural</a>
+    <a asp-action="Create" class="btn btn-outline-primary" >Crear Persona Natural</a>
 </p>
 
 <div class="row">
@@ -71,9 +71,9 @@
                 @Html.DisplayFor(modelItem => item.ModifiedDate)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary" >Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-primary" >Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger" >Eliminar</a>
             </td>
                         </tr>
 }
